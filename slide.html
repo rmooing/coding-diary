@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript연습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul,ol,li {
+      list-style: none;
+    }
+    .slide_wrapper {
+      position: relative;
+      width: 960px;
+      height: 300px;
+      margin: 20px auto 0;
+      overflow: hidden;
+    }
+    .slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid red;
+    }
+    .slides li {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+    }
+    .slides li:not(:last-child) {
+      float: left;
+      margin-left: 30px;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .controls span {
+      background-color: #666;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="slide_wrapper">
+      <ul class="slides">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+      </ul>
+    </div>
+    <p class="controls">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+    </p>
+  </div>
+
+  <script>
+    const slides = document.querySelector(".slides");
+    const slide = document.querySelectorAll(".slides li");
+    const currentIdx = 0;
+    const slideCount = slide.length;
+    const slideWidth = 300;
+    // const slideMargin = 30;
+
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    slides.style.width = slideWidth * slideCount + "px";
+
+    function moveSlide(num) {
+      slides.style.left = -num * 300 + "px";
+      currentIdx = num;
+    };
+
+    nextBtn.addEventListener("click", function() {
+      if(currentIdx > 0) {
+        moveSlide(currentIdx - 1);
+      } else {
+        moveSlide(slideCount -3);
+      }
+    });
+    prevBtn.addEventListener("click", function() {
+      if(currentIdx < slideCount -3) {
+        moveSlide(currentIdx + 1);
+      } else {
+        moveSlide(0);
+      }
+    });
+  </script>
+</body>
+</html> 
