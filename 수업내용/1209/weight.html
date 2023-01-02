@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight</title>
+</head>
+<body>
+
+</body>
+    <script>
+    //입력된 이름,신장,체중 값으로 평균값을 구하고 그 오차범위가 +- 5일때는 정상체중임을 출력 아닐때는 아니다를 출력
+    //1.변수선언 : 이름, 신장, 체중
+    //2.평균체중 계산법의 변수값을 저장 : (키 - 100) * 0.9
+    //3.그의 결과값이 +- 5 오차범위인 result 변수값을 저장 : result = 평균체중 +5,-5
+    //4.삼항 연산으로 범위안인지 아닌지를 판단 : 맞니?->"적정 체중 입니다" : "적정체중이 아닙니다";
+    //5.반환값 출력 : document.write();
+
+    var name = prompt("당신의 이름은?","");
+    var height = prompt("당신의 신장은?","0");
+    var weight = prompt("당신의 몸무게는?","0");
+
+    var normal_w = (height - 100) * 0.9;
+    // var result = normal_w <= normal_w + 5 || normal_w >= normal_w -5 ;
+    var result = normal_w - 5 <= weight && normal_w + 5 >= weight ; 
+    result = result ? "적정 체중 입니다" : "적정 체중이 아닙니다";
+    document.write(name + "님은 " + result);
+    </script>
+</html>
