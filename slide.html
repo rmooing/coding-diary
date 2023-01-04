@@ -9,13 +9,14 @@
     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
     ul,ol,li {
       list-style: none;
     }
     .slide_wrapper {
       position: relative;
-      width: 960px;
+      width: 900px;
       height: 300px;
       margin: 20px auto 0;
       overflow: hidden;
@@ -24,16 +25,14 @@
       position: absolute;
       top: 0;
       left: 0;
-      border: 1px solid red;
     }
     .slides li {
       width: 300px;
       height: 300px;
       border: 1px solid black;
-    }
-    .slides li:not(:last-child) {
+      background-color: bisque;
+      /* margin-left: 30px; */
       float: left;
-      margin-left: 30px;
     }
     .controls {
       text-align: center;
@@ -60,6 +59,8 @@
         <li>6</li>
         <li>7</li>
         <li>8</li>
+        <li>9</li>
+        <!-- <li>10</li> -->
       </ul>
     </div>
     <p class="controls">
@@ -82,20 +83,23 @@
     slides.style.width = slideWidth * slideCount + "px";
 
     function moveSlide(num) {
-      slides.style.left = -num * 300 + "px";
+      slides.style.left = -num * 100 + "px";
       currentIdx = num;
     };
 
     nextBtn.addEventListener("click", function() {
       if(currentIdx > 0) {
+        // moveSlide(currentIdx - 1);
         moveSlide(currentIdx - 1);
       } else {
-        moveSlide(slideCount -3);
+        // moveSlide(slideCount - 3);
+        moveSlide(slideCount - 6);
       }
     });
     prevBtn.addEventListener("click", function() {
-      if(currentIdx < slideCount -3) {
-        moveSlide(currentIdx + 1);
+      if(currentIdx < slideCount - 3) {
+        // moveSlide(currentIdx + 1);
+        moveSlide(currentIdx);
       } else {
         moveSlide(0);
       }
