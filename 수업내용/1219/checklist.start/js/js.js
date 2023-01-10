@@ -38,4 +38,4 @@ function removeList() {
     var id = this.getAttribute("id");
     itemList.splice(id,1);
     showList();
-}
+}<span class="del">X</span>

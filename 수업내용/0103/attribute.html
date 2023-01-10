@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute</title>
+</head>
+<body>
+    <ul class="users" >
+        <li id="1" data-user-id="7621" data-role="admin">Lee</li>
+        <li id="2" data-user-id="9524" data-role="manager">Kim</li>
+    </ul>
+    <script>
+        // 스프레드 문법 : 하나로 뭉쳐있는 여러 값들의 집합을 펼쳐서 개별적인 값들의 목록으로 만듬
+        // 사용대상 : Array, String, Map, set, DOM 콜렉션(NodeList, HTML Collection), arguments와 같이 for...of 문으로 순화할 수 있는 이터러블에 한정됨
+        
+        const users = [...document.querySelector(".users").children]; // li들
+        console.log(users);
+        // user-id가 '7621'인 요소 노드를 취득
+        const user = users.find((user) => user.dataset.userId === '7621'); // 화살표 함수 사용
+
+        //user-id가 '7621'인 요소 노드의 datal-role값을 취득한다
+        console.log(user.dataset.role);
+
+        //user-id가 '7621'인 요소 노드의 datal-role값을 변경한다
+        user.dataset.role = "subscriber";
+        console.log(user.dataset.role);
+
+        
+    </script>
+</body>
+</html>

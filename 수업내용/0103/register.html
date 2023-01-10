@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - Create & Add Node</title>
+    <link rel="stylesheet" href="css/nameList.css">
+</head>
+<body>
+    <div id="container">
+        <h1>참가 신청</h1>
+        <form action="">
+            <input type="text" id="userName" placeholder="이름" required>
+            <button onclick="newRegister();return false">신청</button>
+        </form>
+        <hr>
+        <div id="nameList">
+            <!-- <p>bbg<span class="del">X</span></p> -->
+        </div>
+    </div>
+    <script>
+        function newRegister() {
+            let newP = document.createElement("p");
+            let userName = document.querySelector("#userName");
+            let newText = document.createTextNode(userName.value);
+
+            newP.appendChild(newText);
+
+            // 등록된 p요소의 이름 리스트를 appendChild로 등록
+            let nameList = document.querySelector("#nameList");
+            nameList.appendChild(newP);
+            nameList.insertBefore(newP, nameList.childNodes[0]); // 순서 역행으로 등록되게 하고 싶을때
+            userName.value = ""; // 텍스트 필드 지우기
+
+            // x를 생성하고 마우스 포인트시 더 진하게 표시되게 하는 코드
+            // <span class="del">X</span> 이 부분 만들기
+            let delBtn = document.createElement("span");
+            let delText = document.createTextNode("X");
+
+            // 이 변수 두개를 연결
+            delBtn.appendChild(delText);
+            newP.appendChild(delBtn); // p태그도 연결해줘야 한다
+
+            // 이 요소에 클래스를 생성하고 클래스 이름을 부여한다.
+            // let class1 = document.createAttribute("class");
+            // class1.value = "del";
+            // delBtn.setAttribute(class1);
+            delBtn.setAttribute("class","del");
+
+            // 삭제 버튼을 눌렀을 때 해당 이름을 삭제하는 함수를 x클릭 시 실행
+            let removeBtns = document.querySelectorAll(".del");
+
+            for(let i = 0; i < removeBtns.length; i++) {
+                removeBtns[i].addEventListener("click",function() {
+                    // console.log(this); // this = X(<span class="del">X</span>)
+                    if(this.parentNode.parentNode) // 현재 노드(this)의 부모 노드가 있을경우 실행 -> 노드 삭제는 부모 노드에서 해야하기 때문
+                    this.parentNode.parentNode.removeChild(this.parentNode);
+                    //this -- > span | this.parentNode --> p | this.parentNode.parentNode --> div class = "nameList"
+                });
+            }
+        }
+
+        // 요소에만 접근 하려면 children속성을 사용 
+        // 요소 노드 뿐만 아니라 텍스트 노두나 주석 노드 까지 모두 접근 가능 childeNodes 속성을 사용
+
+
+
+    </script>
+</body>
+</html>

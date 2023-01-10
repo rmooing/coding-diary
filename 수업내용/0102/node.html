@@ -19,19 +19,24 @@
 <body>
     <script>
         // 1.웹문서에 새로운 노드(p태그)를 newP로 생성
-        // 2.텍스트 노드 만들기 ("주문이 완료되었습니다")       
+        var newP = document.createElement("p");
+
+        // 2.텍스트 노드 만들기 ("주문이 완료되었습니다")
+        var textNode = document.createTextNode("주문이 완료되었습니다");
+        newP.appendChild(textNode);
+
         // 3.2번을 자식 노드로 추가하고 브라우저에 출력
+        document.body.appendChild(newP);
         
-        
+        // 4.새로운 속성 노드 추가
+        // 새로운 class 속성 노드를 만들어 attr에 저장.  attr.value를 사용해 attr속성 값을 "accent"로 지정 (2가지 방법)
+        // 4-1
+        // var attr = document.createAttribute("class");
+        // attr.value = "accent";
+        // newP.setAttributeNode(attr);
 
-
-        window.onload = function() {
-            var newP = document.createElement("p");
-            var textNode = document.createTextNode("주문이 완료되었습니다");
-
-            newP.appendChild(textNode);
-            document.body.appendChild(newP);            
-        }
+        // 4-2
+        newP.setAttribute("class","accent");
     </script>
 </body>
 </html>
