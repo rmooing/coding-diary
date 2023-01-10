@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1 */
+        ul {
+            list-style: none;
+        }
+        li {
+            width: 200px;            
+            display: inline-block;
+            margin: 10px;
+            padding: 5px 30px;
+        }
+        li a {
+            text-decoration: none;
+            padding: 5px 20px;
+            color: blue;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        /* a[href] {
+            background-color: yellowgreen;
+        } */
+        [class~="button"] {
+            border: 1px solid black;
+            box-shadow: 5px 5px pink;
+        }
+        [class~="flat"] {
+            color: white;
+            background-color: blue;
+        }
+        /* 2 */
+        /* [class~="button1"] {
+            background-color: yellowgreen;
+        } */
+        /* a[target="_blank"] {
+            padding-right: 30;
+            background: url(/1027/images/newwindow.png) no-repeat center right;
+        } */
+        /* 3 */
+
+        /* 과제 */
+        /* 4 */
+        a[title |="en"] {
+            background: url(/1028/과제/images/us.png) no-repeat center left;
+        }
+        a[title|="jp"] {
+            background: url(/1028/과제/images/jp.png) no-repeat center left;
+        }
+
+         /* 5 */
+        a[class^="en"] {
+            background: url(/1028/과제/images/us.png) no-repeat center left;
+        }
+        a[class^="ja"] {
+            background: url(/1028/과제/images/jp.png) no-repeat center left;
+        }
+        a[class^="ch"] {
+            background: url(/1028/과제/images/ch.png) no-repeat center left;
+        }  
+
+        /* 6 */
+        a[href$="hwp"] {
+            background: url(/1028/과제/images/hwp_icon.gif) no-repeat center right;
+        }
+        a[href$="xls"] {
+            background: url(/1028/과제/images/excel_icon.gif) no-repeat center right;
+        }
+
+        /* 7 */
+        a[href*="w3c"] {
+            background-color: blue;
+            color: red;           
+        } 
+    </style>
+</head>
+<body>
+    <!-- 1 -->
+    <ul>
+        <li><a>메인메뉴:</a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#" class="button">메뉴3</a></li>
+        <li><a href="#" class="flat button">메뉴4</a></li>
+    </ul>
+    <!-- 2 -->
+    <h1>HTML5 표준안 사이트</h1>
+    <ul>
+        <li><a href="http://www.w3c.org/TR/html" target="_blank">HTML</a></li>
+        <li><a href="https://www.w3.org/TR/selectors" class="button1">CSS</a></li>
+        <li><a href="https://www.w3.org/TR/selectors" class="button1">미디어쿼리</a></li>
+    </ul>
+    <!-- 과제 -->
+    <h3>4.외국어서비스 :</h3>
+    <ul>
+        <li><a href="#" title="en">영어</a></li>
+        <li><a href="#" title="en-english">영어</a></li>
+        <li><a href="#" title="jp">일본어</a></li>
+    </ul>
+    <h3>5.외국어서비스 :</h3>
+    <ul>
+        <li><a href="#" class="english">영어</a></li>
+        <li><a href="#" class="japan">일본어</a></li>
+        <li><a href="#" class="china">중국어</a></li>
+    </ul>
+    <h3>6.외국어서비스 :</h3>
+    <ul>
+        <li><a href="test.hwp">hwp 파일</a></li>
+        <li><a href="test.xls">엑셀파일</a></li>
+    </ul>
+    <h3>7.html5 참고 사이트</h3>
+    <p>(아래 링크 중 파란색 배경의 링크는 w3c 사이트로 연결됩니다.)</p>
+    <ul>
+        <li><a href="http://www.w3c.org/TR/html">HTML 표준안 사이트</a></li>
+        <li><a href="http://www.webplatform.org">튜토리얼과 아티클</a></li>
+        <li><a href="http://caniuse.com">HTML 지원 여부 체크</a></li>
+        <li><a href="http://www.w3c.org/TR/css3-mediaqueries">미디어쿼리</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            /* width: 1200px; */
+            margin: 0 auto;
+            width: 100%;
+            height: 80px;
+            background-color: antiquewhite;
+        }
+        .section_wrap {
+            width: 100%;
+            height: 600px;
+            position: relative;
+        }
+        .section_wrap .section1 {
+            /* width: 20%; */
+            width: 250px;
+            height: 600px;
+            background-color: aquamarine;
+            float: left;
+        }
+        .section_wrap .section2 {
+            height: 100%;
+            background-color: rgb(38, 88, 72);
+            margin-right: 250px;
+        }
+        .section_wrap .section3 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 600px;
+            background-color: rgb(36, 6, 92);
+        }
+        .footer {
+            width: 100%;
+            height: 80px;
+            background-color: aqua;
+        }
+        /* 반응형 0~1200px 까지 */
+        @media screen and (max-width: 1200px) {
+            .header {
+                height: 200px;
+            }
+            .section_wrap {
+                width: 100%;
+                /* height: 500px; */
+            }
+            .section_wrap .section2 {
+                margin-right: 0;
+            }
+            .section_wrap .section3 {
+                width: 100%;
+                height: 200px;
+                position: static;
+            }
+            .footer {
+                height: 150px;
+            }
+        }
+        /* 반응형 0~768까지 */
+        @media screen and (max-width: 768px) {
+            .header {
+                height: 300px;
+            }
+            .section_wrap .section1 {
+                width: 100%;
+                display: none;
+            }
+            .section_wrap .section2 {
+                float: none;
+                width: 100%;
+            }
+            .section_wrap .section3 {
+                width: 100%;
+            }
+            .footer {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">상단</div>
+    <div class="section_wrap">
+        <div class="section1">왼쪽</div>
+        <div class="section2">가운데</div>
+        <div class="section3">오른쪽</div>
+    </div>
+    <div class="footer">하단</div>
+</body>
+</html>

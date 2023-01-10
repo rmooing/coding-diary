@@ -1,0 +1,23 @@
+display : block | inline | inline-block | none | contents | table | table-cell
+    block level 요소 : 너비를 100% 가짐. 혼자서 한줄을 다 차지
+    div, h1~h6, li, ul, ol, form, hr, fieldset, address, blockquote, figure, form, nav, main, header, article, aside
+
+    inline level 요소 : 줄을 차지 하지 않고 자기 콘텐츠 영역만 차지, 한줄에 여러개의 인라인 레벨 요소 표시 가능
+    span, a, img, input, label, button, strong, object, br, sub, sup, textarea, select
+
+    inline-block 요소 : 한줄로 배치 가능, 요소를 inline으로 배치 하면서 내용에는 block 레벨 요소를 적용 (flot:left; 와 비슷)
+
+border
+border-style : solid | dotted | dashed | double | groove | inset | outset | ridge | none | hidden
+               값을 여러개 줄 수 있음 (시계 방향으로(12시기준) 한 변씩 적용 )
+border-width : thin | medium | thick
+border-color : 
+border-radius :
+
+box-shadow : x축(+오른쪽| -왼쪽),  y축(+위 | -아래),  blur-radius(양수or음수),  색상 inset(옵션값)
+margin
+    상하로(block) 떨어질때는 겹침(margin-overlap)
+    clear:both; 주면 margin 값을 가지면서 떨어짐
+
+
+    

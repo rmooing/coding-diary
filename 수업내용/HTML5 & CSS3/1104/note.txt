@@ -1,0 +1,29 @@
+애니메이션 키프레임 animation-keyframe
+키프레임:애니메이션이 바뀌는 지점을 설정
+
+    @keyframe 이름 
+        from {
+
+        }to{
+
+        }
+        또는
+        0% {
+
+        }
+        50% {
+
+        }
+        100% {
+
+        }
+    
+    animation-delay : 지연시간 
+    animation-direction: normal | alternate (애니메이션 종료 후 처음부터 시작할지 역방향으로 진행할 지 지정)
+    animation-duration : 지속시간,진행시간
+    animation-fill-mode(애니메이션이 종료 또는 지연되는 상태에 요소의 스타일을 지정) : none | forwords | backwords | both 
+    animation-iteration-count(반복 횟수 숫자) : (기본값은 1) | infinite
+    animation-name : 키프레임으로 설정해 놓은 중간 상태의 이름을 지정
+    animation-play-state(애니메이션을 멈추거나 다시 시작): paused | running 
+    animation-timing-function : 애니메이션의 속도 곡선을 지정
+    animation

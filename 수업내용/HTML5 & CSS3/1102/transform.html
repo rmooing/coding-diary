@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        /* translate */
+        #translate,
+        #scale,
+        #rotate,
+        #skew {
+            width: 100%;
+            height: 300px;
+        }
+        .origin1,
+        .origin2 {
+            width: 200px;
+            height: 134px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+        .origin1 .movex:hover {
+            transform: translate(30px);
+        }
+        .origin1 .movey:hover {
+            transform: translateY(30px);
+        }
+        .origin1 .movez:hover {
+            transform: translate(30px,30px);
+        }
+        /* scale */
+        #scale {
+            width: 100%;
+            height: 300px;
+        }
+        .origin2 .scalex:hover {
+            transform: scale(130%,100%);
+        }
+        .origin2 .scaley:hover {
+            transform: scale(100%,130%);
+        }
+        .origin2 .scalez:hover {
+            transform: scale(50%,50%);
+        }
+        /* rotate */
+        .origin3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+            perspective: 200px;
+        }
+        .origin3 .rotatex {
+            transform: rotatex(45deg);
+            -webkit-transform: rotatex(45deg) ;
+            -ms-transform: rotatex(45deg) ;
+            -moz-transform: rotatex(45deg) ;
+            -o-transform: rotatex(45deg) ;
+        }
+        .origin3 .rotatey {
+            transform: rotateY(45deg);
+            -webkit-transform: rotateY(45deg);
+            -ms-transform: rotateY(45deg);
+            -moz-transform: rotateY(45deg);
+            -o-transform: rotateY(45deg);
+        }
+        .origin3 .rotatez {
+            transform: rotateZ(45deg);
+            -webkit-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+            -moz-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+        }
+        .origin3 .rotatexyz {
+            transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+        }
+        /* 4.skew */
+        #skew {
+            clear: both;
+        }
+        .origin4 {
+            width: 160px;
+            height: 240px;
+            float: left;
+            margin: 100px;
+            border: 1px solid black;
+        }
+        .origin4 .skewx:hover {
+            transform: skewX(30deg);
+            -webkit-transform: skewX(30deg);
+            -ms-transform: skewX(30deg);
+            -moz-transform: skewX(30deg);
+            -o-transform: skewX(30deg);
+        }
+        .origin4 .skewy:hover {
+            transform: skewY(15deg);
+            -webkit-transform: skewY(15deg);
+            -ms-transform: skewY(15deg);
+            -moz-transform: skewY(15deg);
+            -o-transform: skewY(15deg);
+        }
+        .origin4 .skewxy:hover {
+            transform: skew(-25deg, -15deg);
+            -webkit-transform: skew(-25deg, -15deg);
+            -ms-transform: skew(-25deg, -15deg);
+            -moz-transform: skew(-25deg, -15deg);
+            -o-transform: skew(-25deg, -15deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.translate -->
+    <div id="translate">
+        <h2>translate</h2>
+        <div class="origin1">
+            <div class="movex">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin1">
+            <div class="movey">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin1">
+            <div class="movez">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+    </div>
+    <!-- 2.scale -->
+    <div id="scale">
+        <h2>scale</h2>
+        <div class="origin2">
+            <div class="scalex">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin2">
+            <div class="scaley">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin2">
+            <div class="scalez">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+    </div>
+    <!-- 3.rotate -->
+    <div id="rotate">
+        <h2>rotate</h2>
+        <div class="origin3">
+            <div class="rotatex">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin3">
+            <div class="rotatey">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin3">
+            <div class="rotatez">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin3">
+            <div class="rotatexyz">
+                <img src="images/bus.jpg" alt="버스">
+            </div>
+        </div>
+    </div>
+    <!-- 4.skew -->
+    <div id="skew">
+        <h2>skew</h2>
+        <div class="origin4">
+            <div class="skewx">
+                <img src="images/rose.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin4">
+            <div class="skewy">
+                <img src="images/rose.jpg" alt="버스">
+            </div>
+        </div>
+        <div class="origin4">
+            <div class="skewxy">
+                <img src="images/rose.jpg" alt="버스">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

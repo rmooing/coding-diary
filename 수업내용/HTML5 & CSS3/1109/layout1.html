@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #mom {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        #lay1 {
+            background-color: brown;
+            width: 1000px;
+            /* width: 100%; */
+            height: 80px;
+        }
+        #lay2 {
+            background-color: blanchedalmond;
+            width: 200px;
+            /* width: 25%; */
+            height: 600px;
+            float: left;
+        }
+        #lay3 {
+            background-color: rgb(175, 156, 131);
+            width: 800px;
+            /* width: 75%; */
+            height: 600px;
+            float: left;
+        }
+        #lay4 {
+            background-color: rgb(82, 59, 31);
+            width: 1000px;
+            /* width: 100%; */
+            height: 80px;
+            clear: both;
+        }
+        @media screen and (max-width: 1200px) {
+            #mom {
+                width: 100%;
+            }
+            #lay1 {
+                width: 100%;
+                height: 200px;
+            }
+            #lay2 {
+                width: 25%;
+                /* 300/1200 */
+            }
+            #lay3 {
+                width: 75%;
+            }
+            #lay4 {
+                width: 100%;
+                height: 200px;
+            }
+        }
+        @media screen and (max-width:768px) {
+            #lay2 {
+                width: 100%;
+                float: none;
+            }
+            #lay3 {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mom">
+        <div id="lay1">lay1</div>
+        <div id="lay2">lay2</div>
+        <div id="lay3">lay3</div>
+        <div id="lay4">lay4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframe2</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin: 100px;
+        }
+        #box1 {
+            background-color: aquamarine;
+            border: 1px solid black;
+            animation-name: change-1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes change-1 {
+            from {
+                background-color: aquamarine;
+                border: 1px solid black;
+            } to {
+                background-color: aquamarine;
+                border: 3px solid black;
+                border-radius: 50%;
+            }
+        }
+        #box2 {
+            background-color: blueviolet;
+            animation-name: change-2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes change-2 {
+            from {
+                background-color: blueviolet;
+                transform: rotateZ(90deg);
+            } to {
+                transform: rotateZ(135deg)
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

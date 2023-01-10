@@ -1,0 +1,31 @@
+1.transform(변형)
+    transform: 2d,3d 이동
+        translate(x,y) | translateX(x) | translateY(y) | translateZ(z) | translate3d(x, y, z)
+    scale: 2d,3d 확대/축소
+        scale(x,y) | scale(x,y,z) | scaleX(x) | scaleY(y) | scaleZ(z)
+    rotate: 2d,3d 회전
+        rotate(x,y,각도) | rotate3d(x,y,z, 각도) 각도(deg) | rotateX(x) | rotateY(y) | rotateZ(z)
+    skew: 2d 비틀기
+        skew(x,y) | skewX(x) | skewY(y) 
+    matrix3d(n,n,n,n,...)
+    perspective: 원근감, 깊이 값 을 지정 (3d 값을 지정해주기 위해서 꼭 필요함)(부모한테 값 주기)
+
+2.transform-origin: x(길이값,백분율,left,right,center) | y(길이값,백분율,top,bottom,center) | initial | inherit 변형 기준점을 설정
+
+3.perspective-origin : left | right 상대값 원근감의 기준점(부모한테 값 주기)
+
+4.transform-style: flat | preserve-3d(자식한테 값 주기)
+
+5.backface-visibiltity: hidden | visible
+
+
+
+x축 회전 : 통닭구이처럼 내 앞에서 회전
+y축 회전 : 회전문
+z축 회전 : 
+
+
+perspective - transform-style(preserve-3d)세트로 생각해서 적어줄것 
+
+
+*부모가 있다면 부모에게 값 주기

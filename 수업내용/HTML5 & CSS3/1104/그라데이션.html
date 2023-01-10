@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box2 {
+        width: 250px;
+        height: 100%;
+        background: rgb(147, 176, 220);
+        background: linear-gradient(
+          90deg,
+          rgba(147, 176, 220, 1) 0%,
+          rgba(250, 186, 186, 1) 100%
+        );
+        border-radius: 10px;
+      }
+      .box2 ul {
+        width: 140px;
+        height: auto;
+        list-style: none;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .box2 ul li {
+        padding: 5px;
+        color: #4b6487;
+        font-weight: bold;
+        font-size: 20px;
+        width: 140px;
+      }
+      ul li:hover::before {
+        content: "♥";
+        position: fixed;
+        left: 40px;
+      }
+      ul li:nth-child(odd):hover {
+        color: #d0d0d0;
+      }
+      ul li:nth-child(even):hover {
+        color: #fbbaba;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box2">
+      <ul>
+        <li>home</li>
+        <li>brand story</li>
+        <li>product</li>
+        <li>community</li>
+      </ul>
+    </div>
+  </body>
+</html>

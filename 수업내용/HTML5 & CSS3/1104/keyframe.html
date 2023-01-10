@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframe</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            animation-name: change-bg;
+            -webkit-animation-name: change-bg;
+            -ms-animation-name: change-bg;
+            -moz-animation-name: change-bg;
+            -o-animation-name: change-bg;
+            animation-duration: 3s;
+            -webkit-nimation-duration: 3s;
+            -ms-animation-duration: 3s;
+            -moz-animation-duration: 3s;
+            -o-animation-duration: 3s;
+        }
+        @keyframes change-bg {
+            from {
+                background-color: aqua;
+                border: 1px solid black;
+            } to {
+                background-color: blue;
+                border: 3px solid black;
+                border-radius: 50%;
+            }
+            
+        }
+        @-webkit-keyframes change-bg {
+            from {
+                background-color: aqua;
+                border: 1px solid black;
+            } to {
+                background-color: blue;
+                border: 3px solid black;
+                border-radius: 50%;
+            }
+            
+        }
+        @-ms-keyframes change-bg {
+            from {
+                background-color: aqua;
+                border: 1px solid black;
+            } to {
+                background-color: blue;
+                border: 3px solid black;
+                border-radius: 50%;
+            }
+            
+        }
+        @-moz-keyframes change-bg {
+            from {
+                background-color: aqua;
+                border: 1px solid black;
+            } to {
+                background-color: blue;
+                border: 3px solid black;
+                border-radius: 50%;
+            }
+            
+        }
+        @-o-keyframes change-bg {
+            from {
+                background-color: aqua;
+                border: 1px solid black;
+            } to {
+                background-color: blue;
+                border: 3px solid black;
+                border-radius: 50%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

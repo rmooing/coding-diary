@@ -1,0 +1,35 @@
+1.transition : 스타일의 속성이 바뀜
+    transition-propoerty : all | none | 속성이름(width,height,background...)
+    transition-duration : 지속시간,진행시간
+    transition-delay : 시간 지연
+    transition-timing-funcion(속도): linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n)
+
+    transition: all 2s linear(이름,시간,속도)
+    
+2.애니메이션 키프레임 animation-keyframe
+    @keyframe 이름 
+        from {
+
+        }to{
+
+        }
+        또는
+        0% {
+
+        }
+        50% {
+
+        }
+        100% {
+
+        }
+    
+    animation-delay : 시간 지연
+    animation-direction: normal | alternate (애니메이션 종료 후 처음부터 시작할지 역방향으로 진행할 지 지정)
+    animation-duration : 지속시간,진행시간
+    animation-fill-mode : none | forwords | backwords | both (애니메이션이 종료 또는 지연되는 상태에 요소의 스타일을 지정)
+    animation-iteration-count: 반복 횟수 숫자(기본값은 1) | infinite
+    animation-name
+    animation-play-state: paused | running 애니메이션을 멈추거나 다시 시작
+    animation-timing-function
+    animation

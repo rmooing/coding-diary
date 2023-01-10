@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Josefin+Sans:wght@600&family=Jua&family=Noto+Sans+KR:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      div {
+        background: linear-gradient(
+          90deg,
+          rgba(148, 177, 221, 1) 0%,
+          rgba(252, 187, 187, 1) 100%
+        );
+        padding: 50px;
+        box-sizing: border-box;
+        width: 700px;
+        margin: 0 auto;
+        position: relative;
+        top: 250px;
+        border-radius: 20px;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        text-decoration: none;
+        font-family: "Do Hyeon", sans-serif;
+        font-family: "Josefin Sans", sans-serif;
+        font-family: "Jua", sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 3em;
+        color: rgb(75, 100, 136);
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+      p::before {
+        display: block;
+        opacity: 0;
+        content: "";
+        width: 6px;
+        height: 44px;
+        position: absolute;
+        left: 12px;
+        top: 3px;
+        background: rgb(252, 187, 187);
+        transition: all 0.5s;
+      }
+      li:nth-child(2n) > p::before {
+        display: block;
+        opacity: 0;
+        content: "";
+        width: 6px;
+        height: 44px;
+        position: absolute;
+        left: 12px;
+        top: 3px;
+        background: rgb(209, 209, 209);
+        transition: all 0.2s;
+      }
+      p:hover::before {
+        opacity: 1;
+      }
+      li:nth-child(2n) > p:hover::before {
+        opacity: 1;
+      }
+      p {
+        margin-left: 40px;
+        line-height: 40px;
+      }
+      li:nth-child(even):hover {
+        color: rgb(252, 187, 187);
+      }
+      li:nth-child(odd):hover {
+        color: rgb(209, 209, 209);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><p>HOME</p></li>
+        <li><p>Brand Story</p></li>
+        <li><p>Products</p></li>
+        <li><p>Community</p></li>
+      </ul>
+    </div>
+  </body>
+</html>

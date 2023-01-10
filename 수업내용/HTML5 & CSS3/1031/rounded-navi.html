@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rounded-navi</title>
+    <style>
+        ul.navi li {
+          list-style: none;
+          width: 8em;
+          height: 3em;
+          float: left;
+          text-align: center;
+          font-family: "Lucida Grande", sans-serif;
+          border: 1px #333 solid;
+          box-shadow: 1px 1px 1px #bbb;
+        }
+        ul.navi li a {
+            display: block;
+            padding: 0.8em 0.5em 0.5em 0.5em;
+            text-decoration: none;
+            color: black;
+            text-shadow: 1px 1px 0px #ccc;
+        }
+        /* 1 */
+        ul.navi li:hover {
+            background-color: #ccc ;
+        }
+        ul.navi li:hover > a {
+            color: white;
+        }
+        ul.navi li:first-child {
+            border-top-left-radius: 1em;
+            border-bottom-left-radius: 1em;
+        }
+        ul.navi li:last-child {
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+        }
+        ul.navi li:nth-child(odd) {
+            background-color: lightcoral;
+            color: black;
+        }
+        h2 {
+            clear: both;
+            padding-top: 20px;
+        }
+        /* 2 */
+        p:first-of-type {
+            background-color: rgb(133, 16, 16);
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 first / last / nth child -->
+    <div>
+        <h2>first-child/last-child/nth-child</h2>
+        <ul class="navi">
+          <li id="html"><a href="#">HTML5</a></li>
+          <li id="css"><a href="#">CSS3</a></li>
+          <li class="js"><a href="#">JavaScript</a></li>
+          <li id="jquery"><a href="#">JQuery</a></li>
+          <li id="React"><a href="#">React</a></li>
+        </ul>
+      </div>
+
+      <!-- 2 first / last of type-->
+        <h2>first-of-type/last-of-type</h2>
+            <p>The first paragraph.</p>
+            <p>The second paragraph.</p>
+            <p>The third paragraph.</p>
+            <p>The fourth paragraph.</p>
+
+        <!-- 3.only-child/only-of-type -->
+        <h2>only-child</h2>
+        <div>
+            <div>I am an only child.</div>
+        </div>
+        <div>
+            <div>I am the 1st sibling.</div>
+            <div>I am the 2nd sibling.</div>
+            <div>
+            I am the 3rd sibling,
+                <div>but this is an only child.</div>
+            </div>
+        </div>
+        <!-- 4 only-of-type -->
+</body>
+</html>

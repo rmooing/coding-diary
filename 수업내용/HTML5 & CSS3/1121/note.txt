@@ -1,0 +1,22 @@
+display:flex  - 컨테이너(부모)를 flex로 묶어주어야 함, 브러우저 접두사가 필요 (-moz- -o- -ms- -webkit-)
+flex-direction - row(기본값)  | row-reverse | column | column-reverse
+flex-wrap:nowrap(기본값) | wrap | wrap-reverse 
+flex-flow(direction + wrap) : row wrap(기본값)
+order : flex item에 직접 지정, 임의로 지정한 순서대로 배치
+    #container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #box1 {
+        order: 1;
+    }
+
+justify-content: flex-start | flex-end | center | space-between | space-around
+align-items: flex-start | flex-end | center | stretch | baseline
+align-content(justify-content + align-items) : flex-start | flex-end | center | space-between | space-around
+align-self : flex-start | flex-end | center | stretch | baseline | auto
+
+flex-grow: 0 | auto | initial - 항목의 너비를 얼마나 늘릴지 정함
+flex-shrink: 1 | auto | initial - 항목의 너비를 얼마나 줄일지 정함
+flex-basis: auto | initial | 백분율 | 절대값 
+flex(grow+shrink+basis): 0(grow) 1(shrink) auto(basis) - 

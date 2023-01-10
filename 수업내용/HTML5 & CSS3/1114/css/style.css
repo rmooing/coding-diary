@@ -1,0 +1,151 @@
+/* layout 전체 구조 */
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    margin: 0 auto;
+    background-color: #aaa;
+}
+#header {
+    height: 100px;
+    background-color: rgb(207, 241, 255);
+}
+.sec1 {
+    height: 200px;
+    background-color: #bbb;
+}
+.sec2 {
+    height: 300px;
+    background-color: #ccc;
+}
+.sec3 {
+    background-color: #ddd;
+}
+.sec4 {
+    background-color: rgb(83, 77, 77);
+}
+#footer {
+    height: 100px;
+    background-color: #aaa;
+}
+
+/* sec2 */
+.sec2 .sec_L {
+    width: 33.33%;
+    float: left;
+    height:300px;
+    background-color: #888;
+}
+.sec2 .sec_R {
+    width: 66.66%;
+    float: left;
+    height:300px;
+    background-color: #777;
+}
+.sec2 .sec_R .R_t {
+    height: 150px;
+    background-color: coral;
+}
+.sec2 .sec_R .R_b {
+    height: 150px;
+    background-color: pink;
+}
+/* sec3 */
+.sec3 .sec3_b1 {
+    width: 33.333%;
+    height: 200px;
+    float: left;
+    background-color: #666;
+}
+.sec3 .sec3_b2 {
+    width: 33.333%;
+    height: 200px;
+    float: left;
+    background-color: rgb(71, 41, 41);
+}
+.sec3 .sec3_b3 {
+    width: 33.333%;
+    height: 200px;
+    float: left;
+    background-color: rgb(122, 11, 11);
+}
+/* sec4 */
+.sec4 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.sec4 .box {
+    margin: 4.16%;
+    /* 50px/1200px = 4.166666 = 4.16 */
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+.sec4 .sec4_b1 {
+    background-color: antiquewhite;
+}
+.sec4 .sec4_b2 {
+    background-color: antiquewhite;
+}
+.sec4 .sec4_b3 {
+    background-color: antiquewhite;
+}
+.sec4 .sec4_b4 {
+    background-color: antiquewhite;
+}
+@media screen and (max-width: 1200px) {
+    .wrap {
+        width: 100%;
+    }
+    .sec3 .sec3_b1,
+    .sec3 .sec3_b2 {
+        width: 50%;
+        /* float: left; */
+    }
+    .sec3 .sec3_b3 {
+        display: none;
+    }
+    .sec4 .sec4_b4 {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sec1 {
+        height: 150px;
+    }
+    .sec2 .sec_L {
+        width: 25%;
+    }
+    .sec2 .sec_R {
+        width: 75%;
+    }
+    .sec3 .sec3_b1,
+    .sec3 .sec3_b2 {
+        width: 100%;
+        float: none;
+    }
+    /* .sec4 .box {
+        컨텐츠 크기는 절대 줄이지 말것
+    } */
+}
+@media screen and (max-width: 625px) {
+    .sec2 .sec_L,
+    .sec2 .sec_R {
+        width: 100%;
+        float: none;
+    }
+    .sec3 .sec3_b1,
+    .sec3 .sec3_b2 {
+        width: 100%;
+        float: none;
+    }
+    .sec4 .box {
+        /* display: static; */
+        display: none;
+        width: 80%;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-responsive</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            "header header header"
+            "nav section aside"
+            "footer footer footer";
+            height: 100vh;
+            margin: 10px;
+            /* grid-template-columns: 0.7fr 5fr 1fr; */
+            grid-template-columns: 15% 1fr 18%;
+            /* grid-template-rows: 1fr 6fr 0.5fr; */
+            grid-template-rows: 80px 1fr 50px;
+            gap: 5px;
+        }
+        header {
+            background-color: #707070;
+            grid-area: header;
+        }
+        nav {
+            background-color: #acacac;
+            grid-area: nav;       
+        }
+        section {
+            background-color: #b34747;
+            grid-area: section;         
+        }
+        aside {
+            background-color: #ebc2c2;
+            grid-area: aside;          
+        }
+        footer {
+            background-color: #201313;
+            grid-area: footer;           
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <aside>aside</aside>
+    <footer>footer</footer>
+</body>
+</html>

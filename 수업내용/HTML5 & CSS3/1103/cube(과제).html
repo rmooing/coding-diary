@@ -1,0 +1,62 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube</title>
+    <style>
+        #example-element {
+            margin: 150px auto;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            transform: rotate3d(1,1,1,30deg);
+            transform-style: preserve-3d;
+        }
+        .face {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            font-size: 50px;
+        }
+        .front {
+            background-color: rgba(121, 121, 121, 0.7);
+            transform: rotateZ(360deg) translateZ(125px);
+        } 
+        .back {
+            background-color: rgba(0, 239, 16, 0.7);
+            transform: rotateY(180deg) translateZ(125px);
+        }
+        .right {
+            background-color: rgba(211, 9, 36, 0.7);
+            transform: rotateY(90deg) translateZ(125px);
+        }
+        .left {
+            background-color: rgba(30, 155, 238, 0.7);
+            transform: rotateY(-90deg) translateZ(125px) ;
+        }
+        .top {
+            background-color: rgba(208, 255, 0, 0.7);
+            transform: rotateX(90deg) translateZ(125px);
+        }
+        .bottom {
+            background-color: rgba(228, 0, 224, 0.7);
+            transform: rotateX(-90deg) translateZ(125px);
+        }
+    </style>
+</head>
+<body>
+    <section id="example-element">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+    </section>
+</body>
+</html>

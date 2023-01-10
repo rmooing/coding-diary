@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style>
+        #div1 {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 1px solid blue;
+            margin-left: 60px;
+            perspective: 100px;
+        }
+        #div3 {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 1px solid blue;
+            margin-left: 60px;
+            perspective: none;
+        }
+        #div2,
+        #div4 {
+            padding: 50px ;
+            position: absolute;
+            border: 1px solid black;
+            background-color: rgba(0,0,0,0.5);
+            transform-style: preserve-3d;
+            transform: rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>The perspective Property</h1>
+
+    <h2>perspective: 100px:</h2>
+    <div id="div1">DIV1
+        <div id="div2">DIV2</div>
+    </div>
+
+    <h2>perspective: none:</h2>
+    <div id="div3">DIV3
+        <div id="div4">DIV4</div>
+    </div>
+</body>
+</html>

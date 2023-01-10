@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-style & border-radius</title>
+    <style>
+        div {
+            width: 150px;
+            height: 80px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .box1 {
+            border: 3px solid black;
+        }
+        .box2 {
+            border: 3px dotted black;
+        }
+        .box3 {
+            border: 3px dashed black;
+        }
+        #box {
+            width: 150px;
+            height: 80px;
+            border: 1px solid black;
+            background-color: bisque;
+        }
+        .box4 {
+            border-top-left-radius: 75px 40px;
+        }
+        .box5 {
+            border-bottom-right-radius: 75px 20px;
+        }
+        .box6 {
+            border-top-right-radius: 30px 30px;
+        }
+        .box7 {
+            border-radius: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div id="box" class="box4"></div>
+    <div id="box" class="box5"></div>
+    <div id="box" class="box6"></div>
+    <div id="box" class="box7"></div>
+    
+</body>
+</html>

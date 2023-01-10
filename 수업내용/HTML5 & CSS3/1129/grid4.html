@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid4</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        .container {
+            display: grid;
+            gap: 5px;
+            /* grid-template-columns: repeat(6, 1fr); */
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            /* grid-template-rows: repeat(2, 100px); */
+            grid-auto-rows: 100px;
+        }
+        div:first-child {
+        background-color: rgb(89, 214, 173);
+        }
+        div:nth-child(2) {
+        background-color: rgb(17, 119, 167);
+        }
+        div:nth-child(3) {
+        background-color: rgb(93, 144, 202);
+        }
+        div:nth-child(4) {
+        background-color: rgb(76, 130, 218);
+        }
+        div:nth-child(5) {
+        background-color: rgb(138, 127, 255);
+        }
+        div:nth-child(6) {
+        background-color: rgb(127, 146, 255);
+        }
+        div:nth-child(7) {
+        background-color: rgb(219, 127, 255);
+        }
+        div:nth-child(8) {
+        background-color: rgb(255, 127, 219);
+        }
+        div:nth-child(9) {
+        background-color: rgb(116, 219, 184);
+        }
+        div:nth-child(10) {
+        background-color: rgb(127, 255, 157);
+        }
+        div:nth-child(11) {
+        background-color: rgb(171, 229, 116);
+        }
+        div:nth-child(12) {
+        background-color: rgb(255, 210, 127);
+        }        
+        
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </section>    
+</body>
+</html>

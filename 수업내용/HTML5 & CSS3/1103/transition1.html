@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border: 1px solid black;
+            transition-property: all;
+            transition-duration: 2s,6s; 
+            /* 지정된 순서대로 초가 반복됨
+            ex property:a,b,c,d
+               duration:3s,6s
+            -> a(3s),b(6s),c(3s),d(6s) 
+            ex property:a,b,c,
+               duration:3s,6s            
+            -> a(3s),b(6s),c(3s)            
+            */
+        }
+        div {
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        h1 {
+            font-size: 52px;
+            text-align: center;
+        }
+        .box:hover {
+            transform: rotate(180deg);
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .box1:hover {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            transform: rotate(180deg);
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            transition-property: background-color;
+            transition: 2s ease-in;
+        }
+        /* scale rotateX perspective background-color */
+        .box2:hover {
+            background-color: rgba(18,38,148);
+            transform: scale(2) perspective(120px) rotateX(180deg) ;
+            /* 순서 중요 // scale된 다음 perspectiv -> rotate 되기 때문에 순서 중요함 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><h1>!</h1></div>
+
+    <div class="box1"><h1>!</h1></div>
+
+    <div class="box2"><h1>!</h1></div>
+</body>
+</html>

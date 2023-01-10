@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframe4</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            animation: rotate 3s infinite , background 3s infinite alternate;
+        }
+        @keyframes rotate {
+            0% {
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            } 
+            50% {
+                transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+            } 
+            100% {
+                transform: perspective(500px) rotateX(-180deg) rotateY(180deg);
+            }
+        }
+        @keyframes background {
+            0% {
+                background-color: red;
+            } 
+            50% {
+                background-color: green;
+            } 
+            100% {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

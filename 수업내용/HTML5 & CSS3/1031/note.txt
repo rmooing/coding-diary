@@ -1,0 +1,35 @@
+가상클래스와 가상요소
+1.가상클래스 (pseudo class)
+    :link 방문자가 하이퍼링크를 아직 방문하지 않은 링크에 스타일을 적용 , 파란색글씨와 링크를 없애려 할 때 
+    :visited 방문 후에 스타일이 그대로 적용되게 하기 위함
+    :hover 마우스 올렸을때 
+    :active 사용자 입력으로 활성화 된 요소에 적용 // 주로 링크 클릭시 스타일을 지정
+    :focus 웹 요소에 초점이 맞추어졌을 때 스타일 지정
+
+2.UI 요소 상태에 따른 가상 클래스
+    :enabled | :disabled
+    :checked  체크박스/라디오버튼/셀렉트옵션 등 체크해야하는 부분에서 사용
+
+3.구조 가상 클래스 : 특정 위치의 요소를 찾아서 스타일을 적용
+    :root html 자체에 스타일을 적용
+    :nth-child( n| odd/even | 2n | 2n+1 ), nth-last-child(n) 
+    :first-child | last-child
+    :nth-of-type(n) ex):nth-of-a(n) | :nth-last-of-type(n)
+    :first-of-type | :last-of-type
+    :only-child | :only-of-type
+
+4.
+    :target  앵커 목적지에 스타일을 적용
+    :not() 특정 요소에 스타일 적용 제외
+    ::first-line | ::first-letter
+    ::before | ::after     꾸미려고 하는 위치(좌/우)
+    반드시 content가 들어가야 함
+    content = "";
+    가상요소를 생성하고 스타일을 적용
+
+
+
+
+align-items : y(세로)축을 기준으로 정 가운데
+
+em

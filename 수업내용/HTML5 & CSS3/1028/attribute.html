@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1 */
+        ul {
+            list-style: none;
+        }
+        li {
+            width: 120px;
+            display: inline-block;
+            margin: 10px;
+            padding: 5px 30px;
+        }
+        li a {
+            text-decoration: none;
+            padding: 5px 20px;
+            color: blue;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        /* a[href] {
+            background-color: yellowgreen;
+        } */
+        [class~="button"] {
+            border: 1px solid black;
+            box-shadow: 5px 5px pink;
+        }
+        [class~="flat"] {
+            color: white;
+            background-color: blue;
+        }
+
+
+
+
+
+
+        /* 2 */
+        /* [class~="button1"] {
+            background-color: yellowgreen;
+        } */
+        a[target="_blank"] {
+            padding-right: 30;
+            background: url(/1027/images/newwindow.png) no-repeat center right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 -->
+    <ul>
+        <li><a>메인메뉴:</a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#" class="button">메뉴3</a></li>
+        <li><a href="#" class="flat button">메뉴4</a></li>
+    </ul>
+    <!-- 2 -->
+    <h1>HTML5 표준안 사이트</h1>
+    <ul>
+        <li><a href="http://www.w3c.org/TR/html" target="_blank">HTML</a></li>
+        <li><a href="https://www.w3.org/TR/selectors" class="button1">CSS</a></li>
+        <li><a href="https://www.w3.org/TR/selectors" class="button1">미디어쿼리</a></li>
+    </ul>
+    <ul>
+        <li>외국어서비스:</li>
+        <li class="us">영어</li>
+        <li class="us">영어</li>
+        <li>일본어</li>
+    </ul>
+</body>
+</html>
